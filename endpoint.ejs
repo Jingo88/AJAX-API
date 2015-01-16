@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+<p>Exercise: Create your own RandomUser API endpoint
+
+In Express create one route that returns in JSON the properties of a random user. Do not use the RandomUser API, for this exercise you will be making random users on your own.</p>
+
+
+</body>
+</html>
+
+
+<head>
+
+</head>
+<body>
+
+<h1> This is your To Do list! </h1>
+
+	<form action="/addUser" method='post'>
+
+		<input type='text' placeholder='Enter Your First Name' name='first'></input>
+		<input type='text' placeholder='Enter Your Last Name'name='last'></input>
+		<input type='text' placeholder='Enter Your Email' name='email'></input>
+		<input type='submit' value='Add'>
+
+	</form>
+
+
+	<% if (userArr.length > 0) { %>
+		<ul>
+			<% userArr.forEach(function(x){%>
+				<li>
+					<%= x.first %>
+					<%= x.last %>
+					<%= x.email %>
+				</li>
+			<% }) %> 		
+	<% } %>
+
+	
+</body>
+</html>
+
+
+<html>
+<body>
