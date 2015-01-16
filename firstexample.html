@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<img src="" id='one'>
+	<img src="" id='two'>
+
+	<script>
+
+		var url = "http://omdbapi.com/?t=Top%20Gun"
+
+		var xhr = new XMLHttpRequest();
+
+		// this just tells you where to go get the data. 
+		xhr.open("GET", url);
+		
+		// this is an event listener
+
+		// xhr.onreadystatechange = function() {
+		xhr.addEventListener('load', function(e) {
+		  	var d = xhr.responseText
+			var parsed = JSON.parse(d)
+		  	
+		  	var img = document.querySelector('#one');
+		  	var imgagain = document.querySelector('#two');
+
+		  	img.src = parsed.Poster;
+		  	imgagain.src = parsed.Poster;
+
+		// xhr.responseText - this is what get's the shit
+
+
+		  console.log(parsed)
+		})
+
+		xhr.send();
+	</script>
+</body>
+</html>
+
