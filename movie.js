@@ -18,7 +18,10 @@ function findPoster() {
         var d = xhr.responseText
         var parsed = JSON.parse(d)
         var img = document.querySelector('img');
+        var title = document.querySelector('#title');
+
         img.src = parsed.Poster;
+        title = parsed.name;
     })
     xhr.open("GET", url);
     xhr.send();
