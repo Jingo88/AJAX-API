@@ -9,3 +9,6 @@ xhr.addEventListener('load', function(e) {
 })
 xhr.open("GET", url);
 xhr.send();
+
+// randomuser API endpoint: 
+// http://api.randomuser.me/ ruby: response["results"][num]["user"]["email"] docs: https://randomuser.me/
